@@ -77,7 +77,7 @@ export const FilterList: React.FC<FilterListProps> = observer(
           <input
             type="date" 
             id="birthDateFilter"
-            value={filterByDate.toString()}
+            value={dayjs(personStore.filterBirthDate).toISOString().slice(0,10)}
             placeholder={
               personStore.filterBirthDate?.toDateString() || "01.01.1900"
             }
