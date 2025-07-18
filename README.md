@@ -21,6 +21,10 @@ Make sure you have the following installed on your machine:
 
    Navigate to the project directory and install the required dependencies using npm:
 
-3. **Run the Development Server**
+3. **Create .env file**
+
+   Create BACKEND_URL in .env file, use your bitrix 24 webhook
+
+4. **Run the Development Server**
 
    Start the development server with the following command:

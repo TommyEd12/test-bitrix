@@ -52,7 +52,6 @@ export const ContactsTable = observer(() => {
     const pageNumbers = [];
     const { currentPage, totalPages } = personStore;
 
-    // Always show first page
     pageNumbers.push(
       <button
         key={1}
@@ -63,12 +62,10 @@ export const ContactsTable = observer(() => {
       </button>
     );
 
-    // Show ellipsis if current page is far from start
     if (currentPage > 3) {
       pageNumbers.push(<span key="ellipsis-start">...</span>);
     }
 
-    // Show pages around current page
     const startPage = Math.max(2, currentPage - 1);
     const endPage = Math.min(totalPages - 1, currentPage + 1);
 
@@ -86,12 +83,10 @@ export const ContactsTable = observer(() => {
       }
     }
 
-    // Show ellipsis if current page is far from end
     if (currentPage < totalPages - 2) {
       pageNumbers.push(<span key="ellipsis-end">...</span>);
     }
 
-    // Always show last page if there are multiple pages
     if (totalPages > 1) {
       pageNumbers.push(
         <button
@@ -158,7 +153,7 @@ export const ContactsTable = observer(() => {
           ))}
         </tbody>
       </table>
-      
+
       {personStore.totalPages > 1 && (
         <div className="pagination">
           <button
