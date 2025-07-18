@@ -1,0 +1,22 @@
+.filter-list {
+  width: 100% !important;
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.filter-list div {
+  width: 90%;
+  margin: 10px;
+}
+
+.cont input{
+    margin:10px; 
+}
+
+.cont{
+    display: flex;
+    width: auto !important;
+    justify-content: start;
+    align-items: center;
+}
